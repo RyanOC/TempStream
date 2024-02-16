@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ESP32 Webserver</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://db.onlinewebfonts.com/c/8e8e625f12e45ecc674f9579c4547351?family=DS-Digital+Italic" rel="stylesheet">
+    </head>
+    <body>
+        <div id="hamburgerIcon" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="topnav">
+            <h1 style="font-family: DS-Digital Italic;">ESP32 Webserver</h1>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="key">Temperature:</div>
+                <div class="value"><span id="temperature"></span> &deg;F</div>
+            </div>
+        </div>
+        <div id="chart"></div>
+        <div id="configModal" class="modal">
+            <div class="modal-content">
+                <label for="tempAdjust_0">thermo_adjustment:</label>
+                <input id="tempAdjust_0" type="text">                           
+                <button onclick="toggleConfig()">Cancel</button>
+                <button onclick="SaveConfiguration()">Save</button>
+            </div>  
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
